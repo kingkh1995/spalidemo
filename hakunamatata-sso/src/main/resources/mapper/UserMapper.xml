@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hakunamatata.sso.mapper.UserMapper">
+
+  <!-- 通用查询映射结果 -->
+  <resultMap id="BaseResultMap" type="com.hakunamatata.sso.entity.User">
+    <id column="id" property="id"/>
+    <result column="name" property="name"/>
+    <result column="gender" property="gender"/>
+    <result column="age" property="age"/>
+    <result column="email" property="email"/>
+    <result column="favor" property="favor"
+      typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
+    <result column="app_no" property="appNo"/>
+    <result column="version" property="version"/>
+    <result column="deleted" property="deleted"/>
+  </resultMap>
+
+  <resultMap id="BaseDTOResultMap" type="com.hakunamatata.common.model.dto.UserDTO">
+    <result column="favor" property="favor"
+      typeHandler="com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler"/>
+  </resultMap>
+
+  <!-- 通用查询结果列 -->
+  <sql id="Base_Column_List">
+        `id`, `name`, `gender`, `age`, `email`, `favor`, `app_no`, `version`, `deleted`
+  </sql>
+
+  <select id="selectExistedById" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM `user`
+    WHERE `id` = #{id}
+  </select>
+
+  <select id="selectExistedDTOPage" resultMap="BaseDTOResultMap">
+    SELECT
+    `id`, `name`, `gender`, `age`, `email`, CONCAT(LOWER(`name`),'(',`age`,')') AS `desc`, `app_no`, `favor`
+    FROM `user`
+  </select>
+
+</mapper>

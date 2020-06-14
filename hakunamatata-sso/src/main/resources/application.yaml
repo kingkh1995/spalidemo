@@ -1,0 +1,30 @@
+server:
+  port: 8090
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+#dubbo配置
+dubbo:
+  protocol:
+    # 使用 dubbo 协议
+    name: dubbo
+    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    port: -1
+  registry:
+    # 挂载到 Spring Cloud 注册中心
+    address: spring-cloud://localhost
+
+#配置全局逻辑删除字段值 逻辑已删除值默认为 1 逻辑未删除值默认为 0
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+
+#mapper层开启debug日志
+logging:
+  level:
+    com.hakunamatata.sso.mapper: debug
+
