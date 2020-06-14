@@ -15,6 +15,7 @@ buildNumber.properties
 *.iml
 */mvnw
 */mvnw.cmd
+HELP.md
 
 
 ### Java template
