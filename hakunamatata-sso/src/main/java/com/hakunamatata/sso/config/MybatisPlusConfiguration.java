@@ -54,7 +54,7 @@ public class MybatisPlusConfiguration {
                         return singleTenantCondition();
                     }
                 } else {
-                    return null;
+                    return singleTenantCondition();
                 }
             }
 
