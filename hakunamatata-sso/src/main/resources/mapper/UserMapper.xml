@@ -19,7 +19,7 @@
 
   <resultMap id="BaseDTOResultMap" type="com.hakunamatata.common.model.dto.UserDTO">
     <result column="favor" property="favor"
-      typeHandler="com.baomidou.mybatisplus.extension.handlers.FastjsonTypeHandler"/>
+      typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler"/>
   </resultMap>
 
   <!-- 通用查询结果列 -->
