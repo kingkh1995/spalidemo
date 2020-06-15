@@ -34,7 +34,6 @@ public class UserMessageService {
     // 配置监听 input1 binding 使用json方式传输数据 可直接使用类型作为接受参数
     @StreamListener(CustomBinding.INPUT1)
     public void receiveInput1(User receiveMsg) {
-//        int test = 1 / 0;
         System.out.println("input1 receive: " + receiveMsg);
     }
 

@@ -19,12 +19,12 @@ import org.springframework.beans.BeanUtils;
  */
 public abstract class BaseAssembler<E, T extends Serializable> {
 
-    private Class<T> tClass = getTClazz();
-
-    private Class<T> getTClazz() {
+    {
         var type = (ParameterizedType) this.getClass().getGenericSuperclass();
-        return (Class) type.getActualTypeArguments()[1];
+        tClass = (Class) type.getActualTypeArguments()[1];
     }
+
+    private Class<T> tClass;
 
     public T buildDTO(@Nullable E e) {
         if (null != e) {

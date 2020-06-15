@@ -25,7 +25,7 @@ import javax.imageio.ImageIO;
  */
 public class QRCodeUtil extends BaseUtil {
 
-    protected QRCodeUtil() throws IllegalAccessException {
+    private QRCodeUtil() throws IllegalAccessException {
     }
 
     //默认宽度

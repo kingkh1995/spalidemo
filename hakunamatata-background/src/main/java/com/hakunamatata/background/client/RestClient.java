@@ -3,6 +3,7 @@ package com.hakunamatata.background.client;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.base.Preconditions;
 import com.hakunamatata.common.model.bean.Result;
 import com.hakunamatata.common.model.dto.UserDTO;
 import com.hakunamatata.common.util.SentinelExceptionUtil;
@@ -37,10 +38,9 @@ public class RestClient {
             // 动态json转化为JsonNode处理
             var jsonNode = objectMapper.readTree(response);
             var code = objectMapper.treeToValue(jsonNode.findValue("code"), Integer.class);
-            if (!Objects.equals(0, code)) {
-                var message = objectMapper.treeToValue(jsonNode.findValue("message"), String.class);
-                throw new IllegalArgumentException(message);
-            }
+            // 校验返回状态码
+            Preconditions.checkArgument(Objects.equals(0, code),
+                    objectMapper.treeToValue(jsonNode.findValue("message"), String.class));
             dto = objectMapper.treeToValue(jsonNode.findValue("data"), UserDTO.class);
         } catch (Exception e) {
             //todo. 异常处理
