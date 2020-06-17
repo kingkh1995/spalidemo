@@ -6,11 +6,13 @@ import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantHandler;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantSqlParser;
+import java.util.ArrayList;
 import java.util.Arrays;
 import net.sf.jsqlparser.expression.Expression;
-import net.sf.jsqlparser.expression.LongValue;
 import net.sf.jsqlparser.expression.StringValue;
-import net.sf.jsqlparser.expression.operators.relational.EqualsTo;
+import net.sf.jsqlparser.expression.operators.relational.ExpressionList;
+import net.sf.jsqlparser.expression.operators.relational.InExpression;
+import net.sf.jsqlparser.schema.Column;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -42,20 +44,16 @@ public class MybatisPlusConfiguration {
         tenantSqlParser.setTenantHandler(new TenantHandler() {
             @Override
             public Expression getTenantId(boolean where) {
-                //todo. where表示当前sql是不是where条件
-                //todo. 多租户目前有较多bug，update操作报错
+                //where表示当前sql是不是where条件
                 //如果是where，可以追加多租户多个条件in，不是where的情况：比如当insert时，不能insert into user(name, tenant_id) values('test', tenant_id IN (1, 2));
-                if (where) {
-                    //todo. 判断当前是否拥有多个租户的权限
-                    final var multipleTenantIds = true;
-                    if (multipleTenantIds) {
-                        return multipleTenantCondition();
-                    } else {
-                        return singleTenantCondition();
-                    }
+                //todo. 判断当前是否拥有多个租户的权限
+                final var multipleTenantIds = false;
+                if (where && multipleTenantIds) {
+                    return multipleTenantCondition();
                 } else {
                     return singleTenantCondition();
                 }
+
             }
 
             private Expression singleTenantCondition() {
@@ -64,21 +62,17 @@ public class MybatisPlusConfiguration {
             }
 
             private Expression multipleTenantCondition() {
-                // IN逻辑 InExpression
-                /*final var inExpression = new InExpression();
+                //todo. 目前有Bug
+                //IN逻辑 InExpression
+                final var inExpression = new InExpression();
                 inExpression.setLeftExpression(new Column(getTenantIdColumn()));
                 final var itemsList = new ExpressionList();
                 final var inValues = new ArrayList<Expression>(2);
-                inValues.add(new StringValue("app1"));//ID自己想办法获取到
+                inValues.add(new StringValue("app1"));
                 inValues.add(new StringValue("app2"));
                 itemsList.setExpressions(inValues);
                 inExpression.setRightItemsList(itemsList);
-                return inExpression;*/
-                //todo. 1=1
-                final var expression = new EqualsTo();
-                expression.setLeftExpression(new LongValue(1));
-                expression.setRightExpression(new LongValue(1));
-                return expression;
+                return inExpression;
             }
 
             @Override

@@ -39,6 +39,12 @@
       <artifactId>mybatis-plus-boot-starter</artifactId>
       <version>3.3.0</version>
     </dependency>
+    <!--解决bug，指定jsqlparser版本，否则mybatis-plus多租户实现会报错-->
+    <dependency>
+      <groupId>com.github.jsqlparser</groupId>
+      <artifactId>jsqlparser</artifactId>
+      <version>3.1</version>
+    </dependency>
     <dependency>
       <groupId>com.alibaba.cloud</groupId>
       <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
