@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * user 前端控制器
+ * user 前端控制器 & dubbo生产者
  *
  * @author KaiKoo
  * @date 2020/4/23 22:14

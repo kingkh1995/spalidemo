@@ -28,3 +28,9 @@ logging:
   level:
     com.hakunamatata.sso.mapper: debug
 
+#shiro配置登录接口，默认为login.jsp
+shiro:
+  loginUrl: /login
+
+
+

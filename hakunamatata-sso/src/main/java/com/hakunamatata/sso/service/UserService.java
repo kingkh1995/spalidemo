@@ -1,6 +1,7 @@
 package com.hakunamatata.sso.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.hakunamatata.sso.bean.UserSsoReq;
 import com.hakunamatata.sso.entity.User;
 
 /**
@@ -13,4 +14,7 @@ public interface UserService extends IService<User> {
 
     User getExistedById(Long id);
 
+    User getByUsername(String username);
+
+    boolean setPassword(UserSsoReq req);
 }

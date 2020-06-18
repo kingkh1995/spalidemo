@@ -1,0 +1,86 @@
+package com.hakunamatata.sso.config;
+
+import com.hakunamatata.common.model.bean.TokenWebSessionManager;
+import org.apache.shiro.mgt.SessionsSecurityManager;
+import org.apache.shiro.realm.Realm;
+import org.apache.shiro.spring.web.config.DefaultShiroFilterChainDefinition;
+import org.apache.shiro.spring.web.config.ShiroFilterChainDefinition;
+import org.apache.shiro.web.filter.mgt.DefaultFilter;
+import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+/**
+ * shiro配置类
+ * todo. 登录filter定制 redis支持 权限控制
+ *
+ * @author KaiKoo
+ * @date 2020/6/16 23:41
+ */
+@Configuration
+public class ShiroConfiguration {
+
+
+    /**
+     * Apache Shiro 的核心通过 Filter 来实现
+     *
+     * anno：不需要授权、登录就可以访问
+     * authc：需要登录授权才能访问
+     * logout：退出拦截器。退出成功后，会 redirect到设置的/URI
+     * noSessionCreation：不创建会话连接器
+     * rest：rest风格拦截器
+     * user：用户拦截器。eg：登录后（authc），第二次没登陆但是有记住我(rememberMe)都可以访问
+     * @see DefaultFilter
+     *
+     * 可以通过注入filter自己定义拦截类型，或者替换默认的拦截实现
+     *
+     * 如无需定制化ShiroFilter，只需要注册ShiroFilterChainDefinition
+     */
+    @Bean
+    public ShiroFilterChainDefinition shiroFilterChainDefinition() {
+        var filterChainDefinition = new DefaultShiroFilterChainDefinition();
+        // 拦截器配置 使用的是LinkedHashMap 会进行顺序判断
+        filterChainDefinition.addPathDefinition("/static/**", "anon");
+        filterChainDefinition.addPathDefinition("/swagger-ui.html", "anon");
+        filterChainDefinition.addPathDefinition("/webjars/**", "anon");
+        filterChainDefinition.addPathDefinition("/v2/**", "anon");
+        filterChainDefinition.addPathDefinition("/swagger-resources/**", "anon");
+        filterChainDefinition.addPathDefinition("/h2-console/**", "anon");
+
+        // 开放登录和登录成功接口
+        filterChainDefinition.addPathDefinition("/login", "anon");
+        filterChainDefinition.addPathDefinition("/", "anon");
+        // 退出接口，shiro已直接实现，无需写controller，会重定向到"/"路径下
+        filterChainDefinition.addPathDefinition("/logout", "logout");
+
+        filterChainDefinition.addPathDefinition("/password/setup", "anon");
+
+        // 将/**放在最为下边
+        filterChainDefinition.addPathDefinition("/**", "authc");
+        return filterChainDefinition;
+    }
+
+    /**
+     * 注册SecurityManager
+     * 使用DefaultWebSecurityManager
+     */
+    @Bean
+    public SessionsSecurityManager sessionsSecurityManager() {
+        //web应用使用DefaultWebSecurityManager
+        var securityManager = new DefaultWebSecurityManager();
+        //配置自定义的SessionManger
+        securityManager.setSessionManager(new TokenWebSessionManager());
+        //配置自定义的realm
+        securityManager.setRealm(userRealm());
+        //因为是基于token认证，关闭掉默认添加的记住我功能
+        securityManager.setRememberMeManager(null);
+        return securityManager;
+    }
+
+    // 注册为bean，因为需要自动注入UserService
+    @Bean
+    public Realm userRealm() {
+        return new UserRealm();
+    }
+
+}
