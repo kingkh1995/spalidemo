@@ -1,4 +1,4 @@
-package com.hakunamatata.sso.config;
+package com.hakunamatata.sso.bean;
 
 import com.hakunamatata.sso.service.UserService;
 import org.apache.commons.lang3.StringUtils;
@@ -15,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * shiro框架实现realm
  * 只继承AuthenticatingRealm做认证，如需做权限控制需要实现AuthorizingRealm
+ * todo. 权限控制
  *
  * @author KaiKoo
  * @date 2020/6/16 21:49

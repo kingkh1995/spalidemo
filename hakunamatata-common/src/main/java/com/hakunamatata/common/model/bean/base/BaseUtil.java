@@ -1,4 +1,4 @@
-package com.hakunamatata.common.model.bean;
+package com.hakunamatata.common.model.bean.base;
 
 /**
  * 工具类基类

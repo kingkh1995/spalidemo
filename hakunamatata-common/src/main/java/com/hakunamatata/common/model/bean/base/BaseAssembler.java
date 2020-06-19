@@ -1,4 +1,4 @@
-package com.hakunamatata.common.model.bean;
+package com.hakunamatata.common.model.bean.base;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;

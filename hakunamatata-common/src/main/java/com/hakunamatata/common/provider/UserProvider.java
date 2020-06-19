@@ -1,8 +1,8 @@
 package com.hakunamatata.common.provider;
 
 import com.github.pagehelper.PageInfo;
-import com.hakunamatata.common.model.bean.Result;
 import com.hakunamatata.common.enums.GenderEnum;
+import com.hakunamatata.common.model.bean.Result;
 import com.hakunamatata.common.model.dto.UserDTO;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;

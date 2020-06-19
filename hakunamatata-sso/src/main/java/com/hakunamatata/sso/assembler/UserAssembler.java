@@ -3,7 +3,7 @@ package com.hakunamatata.sso.assembler;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
-import com.hakunamatata.common.model.bean.BaseAssembler;
+import com.hakunamatata.common.model.bean.base.BaseAssembler;
 import com.hakunamatata.common.model.dto.UserDTO;
 import com.hakunamatata.sso.entity.User;
 import java.util.Collections;

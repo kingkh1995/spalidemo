@@ -20,7 +20,7 @@ import org.springframework.web.client.RestTemplate;
 public class BaseConfiguration {
 
     @Bean
-    public ObjectMapper objectMapper(){
+    public ObjectMapper objectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
         // 包含 NON_NULL NON_ABSENT
         objectMapper.setSerializationInclusion(Include.NON_EMPTY);

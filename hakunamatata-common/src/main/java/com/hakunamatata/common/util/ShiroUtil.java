@@ -1,6 +1,6 @@
 package com.hakunamatata.common.util;
 
-import com.hakunamatata.common.model.bean.BaseUtil;
+import com.hakunamatata.common.model.bean.base.BaseUtil;
 import java.util.Collection;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.crypto.hash.Md5Hash;
@@ -9,7 +9,7 @@ import org.apache.shiro.session.Session;
 import org.apache.shiro.session.mgt.DefaultSessionManager;
 
 /**
- * shiro session 工具类
+ * shiro 工具类
  *
  * @author KaiKoo
  * @date 2020/6/18 23:12

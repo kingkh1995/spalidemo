@@ -1,4 +1,4 @@
-package com.hakunamatata.sso.bean;
+package com.hakunamatata.sso.entity;
 
 import java.io.Serializable;
 import javax.validation.constraints.NotBlank;

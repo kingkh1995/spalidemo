@@ -1,4 +1,4 @@
-package com.hakunamatata.common.model.bean;
+package com.hakunamatata.common.model.bean.shiro;
 
 import java.io.Serializable;
 import javax.servlet.ServletRequest;
@@ -21,6 +21,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 基于token认证的自定义SessionManager
  * 将sessionid作为token添加到请求头中进行认证
+ * todo. 防止重复创建session
  *
  * @author KaiKoo
  * @date 2020/6/18 21:49
@@ -29,7 +30,8 @@ public class TokenWebSessionManager extends DefaultSessionManager implements Web
 
     public TokenWebSessionManager() {
         // 配置session超时时间（毫秒）
-        this.setGlobalSessionTimeout(1000 * 10); //30分钟
+        this.setGlobalSessionTimeout(1000 * 60 * 30); //30分钟
+        // todo...使用redis进行会话管理
     }
 
     private static final Logger log = LoggerFactory.getLogger(TokenWebSessionManager.class);

@@ -2,7 +2,7 @@ package com.hakunamatata.sso.controller;
 
 import com.hakunamatata.common.model.bean.Result;
 import com.hakunamatata.common.util.ShiroUtil;
-import com.hakunamatata.sso.bean.UserSsoReq;
+import com.hakunamatata.sso.entity.UserSsoReq;
 import com.hakunamatata.sso.service.UserService;
 import javax.validation.Valid;
 import lombok.extern.slf4j.Slf4j;

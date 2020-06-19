@@ -1,6 +1,6 @@
 package com.hakunamatata.sso.message;
 
-import com.hakunamatata.sso.config.CustomBinding;
+import com.hakunamatata.sso.bean.CustomBinding;
 import com.hakunamatata.sso.entity.User;
 import java.util.HashMap;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.hakunamatata.sso.config;
+package com.hakunamatata.sso.bean;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.cloud.stream.annotation.Output;

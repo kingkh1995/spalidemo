@@ -1,6 +1,6 @@
 package com.hakunamatata.sso;
 
-import com.hakunamatata.sso.config.CustomBinding;
+import com.hakunamatata.sso.bean.CustomBinding;
 import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

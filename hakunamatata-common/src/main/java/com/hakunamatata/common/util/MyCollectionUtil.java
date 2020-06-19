@@ -1,6 +1,6 @@
 package com.hakunamatata.common.util;
 
-import com.hakunamatata.common.model.bean.BaseUtil;
+import com.hakunamatata.common.model.bean.base.BaseUtil;
 import org.springframework.lang.Nullable;
 
 /**

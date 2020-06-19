@@ -1,8 +1,8 @@
 package com.hakunamatata.sso.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.hakunamatata.sso.bean.UserSsoReq;
 import com.hakunamatata.sso.entity.User;
+import com.hakunamatata.sso.entity.UserSsoReq;
 
 /**
  * user 服务类 （方法名使用：save remove update get list page）

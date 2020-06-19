@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.pagination.optimize.JsqlParserCountOptimize;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantHandler;
 import com.baomidou.mybatisplus.extension.plugins.tenant.TenantSqlParser;
+import com.hakunamatata.sso.bean.CustomIdGenerator;
 import java.util.ArrayList;
 import java.util.Arrays;
 import net.sf.jsqlparser.expression.Expression;

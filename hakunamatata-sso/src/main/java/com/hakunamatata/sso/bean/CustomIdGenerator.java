@@ -1,4 +1,4 @@
-package com.hakunamatata.sso.config;
+package com.hakunamatata.sso.bean;
 
 import com.baomidou.mybatisplus.core.incrementer.IdentifierGenerator;
 import java.util.concurrent.atomic.LongAdder;
@@ -24,7 +24,7 @@ public class CustomIdGenerator implements IdentifierGenerator {
 
     @Override
     public Long nextId(Object entity) {
-        //todo. 自行实现
+        //todo. 待实现
         adder.increment();
         final var id = adder.sum();
         return id;

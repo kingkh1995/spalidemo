@@ -2,8 +2,8 @@ package com.hakunamatata.common.util;
 
 import com.alibaba.cloud.sentinel.rest.SentinelClientHttpResponse;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.hakunamatata.common.model.bean.BaseUtil;
 import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.BaseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
