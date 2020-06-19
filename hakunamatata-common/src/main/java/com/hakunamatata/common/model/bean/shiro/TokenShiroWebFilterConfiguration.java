@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * 自定义 shiro filter 配置类
  *
  * @author KaiKoo
- * @date 2020/6/19 22:13
  */
 @Configuration
 public class TokenShiroWebFilterConfiguration extends AbstractShiroWebFilterConfiguration {

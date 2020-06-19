@@ -4,7 +4,6 @@ package com.hakunamatata.common.model.bean.base;
  * 工具类基类
  *
  * @author KaiKoo
- * @date 2020/4/25 18:36
  */
 public abstract class BaseUtil {
 

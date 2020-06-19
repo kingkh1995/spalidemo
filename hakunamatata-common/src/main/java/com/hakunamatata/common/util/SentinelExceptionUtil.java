@@ -2,7 +2,7 @@ package com.hakunamatata.common.util;
 
 import com.alibaba.cloud.sentinel.rest.SentinelClientHttpResponse;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import com.hakunamatata.common.model.bean.base.BaseUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpRequest;
@@ -14,7 +14,6 @@ import org.springframework.http.client.ClientHttpResponse;
  * sentinel公共处理工具类
  *
  * @author KaiKoo
- * @date 2020/5/11 23:40
  */
 @Slf4j
 public class SentinelExceptionUtil extends BaseUtil {

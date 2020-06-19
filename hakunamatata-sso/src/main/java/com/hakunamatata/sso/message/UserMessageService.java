@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 /**
  * user消息处理类
  * @author KaiKoo
- * @date 2020/5/27 23:24
  */
 @Slf4j
 @Component

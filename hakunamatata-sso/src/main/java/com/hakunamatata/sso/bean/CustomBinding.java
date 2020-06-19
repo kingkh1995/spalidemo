@@ -7,8 +7,8 @@ import org.springframework.messaging.SubscribableChannel;
 
 /**
  * 自定义binding配置
+ *
  * @author KaiKoo
- * @date 2020/6/1 20:48
  */
 public interface CustomBinding {
 

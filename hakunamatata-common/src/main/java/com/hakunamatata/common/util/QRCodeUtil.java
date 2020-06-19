@@ -22,6 +22,8 @@ import javax.imageio.ImageIO;
 
 /**
  * 二维码生成工具类
+ *
+ * @author KaiKoo
  */
 public class QRCodeUtil extends BaseUtil {
 

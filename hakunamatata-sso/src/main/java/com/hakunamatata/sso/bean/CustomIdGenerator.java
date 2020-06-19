@@ -8,7 +8,6 @@ import javax.annotation.PostConstruct;
  * 自定义ID生成策略
  *
  * @author KaiKoo
- * @date 2020/4/30 23:15
  */
 public class CustomIdGenerator implements IdentifierGenerator {
 

@@ -14,7 +14,6 @@ import org.springframework.web.client.RestTemplate;
  * 基础配置类
  *
  * @author KaiKoo
- * @date 2020/5/10 15:03
  */
 @Configuration
 public class BaseConfiguration {

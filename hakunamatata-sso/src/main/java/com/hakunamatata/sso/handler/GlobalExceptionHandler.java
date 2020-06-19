@@ -1,6 +1,6 @@
 package com.hakunamatata.sso.handler;
 
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * 全局异常处理
  *
  * @author KaiKoo
- * @date 2020/4/27 0:25
  */
 @Slf4j
 @RestControllerAdvice

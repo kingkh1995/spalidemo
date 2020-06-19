@@ -1,6 +1,6 @@
 package com.hakunamatata.background;
 
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import com.hakunamatata.common.model.dto.UserDTO;
 import com.hakunamatata.common.provider.UserProvider;
 import org.apache.dubbo.config.annotation.Reference;

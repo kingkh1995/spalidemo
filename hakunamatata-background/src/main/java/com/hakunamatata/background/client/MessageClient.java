@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 /**
  * 消息处理client
+ *
  * @author KaiKoo
- * @date 2020/6/1 22:18
  */
 @Component
 public class MessageClient {

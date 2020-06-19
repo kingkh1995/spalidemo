@@ -7,7 +7,6 @@ import org.springframework.lang.Nullable;
  * 集合工具类
  *
  * @author KaiKoo
- * @date 2020/4/15 20:18
  */
 public class MyCollectionUtil extends BaseUtil {
 

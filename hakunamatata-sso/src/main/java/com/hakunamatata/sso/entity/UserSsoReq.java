@@ -7,7 +7,6 @@ import lombok.Data;
 /**
  * 设置密码接口requst
  * @author KaiKoo
- * @date 2020/6/16 22:35
  */
 @Data
 public class UserSsoReq implements Serializable {

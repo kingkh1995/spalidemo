@@ -7,6 +7,8 @@
   <resultMap id="BaseResultMap" type="com.hakunamatata.sso.entity.User">
     <id column="id" property="id"/>
     <result column="name" property="name"/>
+    <result column="username" property="username"/>
+    <result column="password" property="password"/>
     <result column="gender" property="gender"/>
     <result column="age" property="age"/>
     <result column="email" property="email"/>
@@ -24,7 +26,7 @@
 
   <!-- 通用查询结果列 -->
   <sql id="Base_Column_List">
-        `id`, `name`, `gender`, `age`, `email`, `favor`, `app_no`, `version`, `deleted`
+        `id`, `name`, `username`, `password`, `gender`, `age`, `email`, `favor`, `app_no`, `version`, `deleted`
   </sql>
 
   <select id="selectExistedById" resultMap="BaseResultMap">
@@ -36,7 +38,7 @@
 
   <select id="selectExistedDTOPage" resultMap="BaseDTOResultMap">
     SELECT
-    `id`, `name`, `gender`, `age`, `email`, CONCAT(LOWER(`name`),'(',`age`,')') AS `desc`, `app_no`, `favor`
+    `id`, `name`, `username`,`gender`, `age`, `email`, CONCAT(LOWER(`name`),'(',`age`,')') AS `desc`, `app_no`, `favor`
     FROM `user`
   </select>
 

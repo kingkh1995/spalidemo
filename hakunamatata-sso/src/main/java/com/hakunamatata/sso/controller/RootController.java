@@ -1,6 +1,6 @@
 package com.hakunamatata.sso.controller;
 
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import com.hakunamatata.common.util.ShiroUtil;
 import com.hakunamatata.sso.entity.UserSsoReq;
 import com.hakunamatata.sso.service.UserService;
@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RestController;
  * 单点登录控制器
  *
  * @author KaiKoo
- * @date 2020/6/16 22:34
  */
 @Slf4j
 @RestController

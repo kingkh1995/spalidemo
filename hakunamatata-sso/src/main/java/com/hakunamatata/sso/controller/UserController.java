@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.github.pagehelper.PageInfo;
 import com.hakunamatata.common.enums.GenderEnum;
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import com.hakunamatata.common.model.dto.UserDTO;
 import com.hakunamatata.common.provider.UserProvider;
 import com.hakunamatata.common.util.MyCollectionUtil;
@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
  * user 前端控制器 & dubbo生产者
  *
  * @author KaiKoo
- * @date 2020/4/23 22:14
  */
 @Service //声明为dubbo生成者
 @Slf4j

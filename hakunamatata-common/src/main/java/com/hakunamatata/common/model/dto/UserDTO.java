@@ -9,7 +9,6 @@ import lombok.Data;
  * user 数据传输对象
  *
  * @author KaiKoo
- * @date 2020/4/24 20:35
  */
 @Data
 public class UserDTO implements Serializable {

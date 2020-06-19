@@ -6,7 +6,6 @@ import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
  * 自定义SecurityManager
  *
  * @author KaiKoo
- * @date 2020/6/19 22:55
  */
 public class TokenSecurityManager extends DefaultWebSecurityManager {
 

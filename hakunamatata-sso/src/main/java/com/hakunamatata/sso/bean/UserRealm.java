@@ -18,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
  * todo. 权限控制
  *
  * @author KaiKoo
- * @date 2020/6/16 21:49
  */
 public class UserRealm extends AuthenticatingRealm {
 

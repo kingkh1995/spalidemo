@@ -1,4 +1,4 @@
-package com.hakunamatata.common.model.bean;
+package com.hakunamatata.common.model.bean.base;
 
 import com.github.pagehelper.PageInfo;
 import java.io.Serializable;
@@ -13,7 +13,6 @@ import org.apache.commons.lang3.StringUtils;
  * Result
  *
  * @author KaiKoo
- * @date 2020/4/21 20:50
  */
 @Getter
 @ToString

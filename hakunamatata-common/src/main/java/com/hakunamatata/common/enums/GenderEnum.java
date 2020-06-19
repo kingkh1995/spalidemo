@@ -7,7 +7,6 @@ import lombok.Getter;
  * 性别枚举
  *
  * @author KaiKoo
- * @date 2020/4/24 21:24
  */
 @Getter
 @AllArgsConstructor

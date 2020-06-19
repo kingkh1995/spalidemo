@@ -4,7 +4,7 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.base.Preconditions;
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import com.hakunamatata.common.model.dto.UserDTO;
 import com.hakunamatata.common.util.SentinelExceptionUtil;
 import java.util.Objects;
@@ -17,7 +17,6 @@ import org.springframework.web.client.RestTemplate;
  * RestTemplate 封装client
  *
  * @author KaiKoo
- * @date 2020/5/12 21:55
  */
 @Service
 @Slf4j

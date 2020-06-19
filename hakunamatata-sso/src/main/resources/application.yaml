@@ -11,7 +11,7 @@ dubbo:
   protocol:
     # 使用 dubbo 协议
     name: dubbo
-    # dubbo 协议端口（ -1 表示自增端口，从 20880 开始）
+    # 生产者需要开放dubbo协议端口（ -1 表示自增端口，从 20880 开始）
     port: -1
   registry:
     # 挂载到 Spring Cloud 注册中心
@@ -22,11 +22,6 @@ mybatis-plus:
   global-config:
     db-config:
       logic-delete-field: deleted
-
-#mapper层开启debug日志
-logging:
-  level:
-    com.hakunamatata.sso.mapper: debug
 
 #shiro配置登录接口，默认为login.jsp
 shiro:

@@ -2,7 +2,7 @@ package com.hakunamatata.common.provider;
 
 import com.github.pagehelper.PageInfo;
 import com.hakunamatata.common.enums.GenderEnum;
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import com.hakunamatata.common.model.dto.UserDTO;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
  * user 生产者
  *
  * @author KaiKoo
- * @date 2020/4/24 20:31
  */
 public interface UserProvider {
 

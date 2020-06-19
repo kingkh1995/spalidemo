@@ -2,7 +2,7 @@ package com.hakunamatata.background.controller;
 
 import com.hakunamatata.background.client.RestClient;
 import com.hakunamatata.background.config.InfoConfiguration;
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import com.hakunamatata.common.model.dto.UserDTO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
  * BaseController
  *
  * @author KaiKoo
- * @date 2020/4/22 20:41
  */
 @Slf4j
 @RefreshScope //使用@RefreshScope和@Value注解开启配置自动刷新

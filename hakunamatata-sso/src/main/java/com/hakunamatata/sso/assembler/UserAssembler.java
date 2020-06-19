@@ -15,7 +15,6 @@ import org.springframework.util.CollectionUtils;
  * user 装配工具类
  *
  * @author KaiKoo
- * @date 2020/4/24 20:39
  */
 @Component //定义为component使用
 public class UserAssembler extends BaseAssembler<User, UserDTO> {

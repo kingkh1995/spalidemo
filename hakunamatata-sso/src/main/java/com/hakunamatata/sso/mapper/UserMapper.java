@@ -11,7 +11,6 @@ import com.hakunamatata.sso.entity.User;
  * user Mapper 接口 （方法名使用：insert delete update select selectList selectPage）
  *
  * @author KaiKoo
- * @date 2020/4/23 22:01
  */
 public interface UserMapper extends BaseMapper<User> {
 

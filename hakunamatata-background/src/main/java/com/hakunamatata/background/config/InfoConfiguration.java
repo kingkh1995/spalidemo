@@ -13,7 +13,6 @@ import org.springframework.stereotype.Component;
  * 后台信息配置（nacos config example）
  *
  * @author KaiKoo
- * @date 2020/5/10 15:11
  */
 @Data
 @Component

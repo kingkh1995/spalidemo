@@ -15,7 +15,6 @@ import org.springframework.beans.BeanUtils;
  * 装配工具类基类
  *
  * @author KaiKoo
- * @date 2020/4/28 20:28
  */
 public abstract class BaseAssembler<E, T extends Serializable> {
 

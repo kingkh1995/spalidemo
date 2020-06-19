@@ -24,7 +24,6 @@ import org.slf4j.LoggerFactory;
  * todo. 防止重复创建session
  *
  * @author KaiKoo
- * @date 2020/6/18 21:49
  */
 public class TokenWebSessionManager extends DefaultSessionManager implements WebSessionManager {
 

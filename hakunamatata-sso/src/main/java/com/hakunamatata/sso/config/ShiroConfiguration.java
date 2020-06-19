@@ -17,7 +17,6 @@ import org.springframework.context.annotation.Import;
  * todo. redis实现缓存
  *
  * @author KaiKoo
- * @date 2020/6/16 23:41
  */
 @Configuration
 @Import(TokenShiroWebFilterConfiguration.class) //注入shiro filter配置

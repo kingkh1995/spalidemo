@@ -15,7 +15,6 @@ import lombok.experimental.Accessors;
  * user
  *
  * @author KaiKoo
- * @date 2020/4/23 21:56
  */
 @Data
 @Accessors(chain = true)

@@ -12,7 +12,6 @@ import org.apache.shiro.session.mgt.DefaultSessionManager;
  * shiro 工具类
  *
  * @author KaiKoo
- * @date 2020/6/18 23:12
  */
 public class ShiroUtil extends BaseUtil {
 

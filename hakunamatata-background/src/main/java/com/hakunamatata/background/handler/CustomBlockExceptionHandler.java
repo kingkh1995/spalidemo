@@ -3,7 +3,7 @@ package com.hakunamatata.background.handler;
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hakunamatata.common.model.bean.Result;
+import com.hakunamatata.common.model.bean.base.Result;
 import java.io.PrintWriter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
  * 自定义controller层sentinel拦截返回信息
  *
  * @author KaiKoo
- * @date 2020/5/13 23:17
  */
 @Component
 public class CustomBlockExceptionHandler implements BlockExceptionHandler {
