@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Import;
 
 /**
  * shiro配置类
- * todo. redis实现缓存
+ * todo. redis实现缓存管理
  *
  * @author KaiKoo
  */
@@ -46,13 +46,12 @@ public class ShiroConfiguration {
         filterChainDefinition.addPathDefinition("/swagger-resources/**", "anon");
         filterChainDefinition.addPathDefinition("/h2-console/**", "anon");
 
-        // 开放登录和登录成功接口
-        filterChainDefinition.addPathDefinition("/login", "anon");
+        // 开放登录成功接口
         filterChainDefinition.addPathDefinition("/", "anon");
         // 退出接口，shiro已直接实现，无需写controller，会重定向到"/"路径下
         filterChainDefinition.addPathDefinition("/logout", "logout");
 
-        //需要放开的接口
+        //需要自定义拦截操作的接口
         filterChainDefinition.addPathDefinition("/password/setup", "anon");
 
         // 将/**放在最为下边

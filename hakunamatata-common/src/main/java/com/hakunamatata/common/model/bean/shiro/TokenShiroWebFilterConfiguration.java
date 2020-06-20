@@ -18,10 +18,10 @@ public class TokenShiroWebFilterConfiguration extends AbstractShiroWebFilterConf
     @Override
     protected ShiroFilterFactoryBean shiroFilterFactoryBean() {
         var shiroFilterFactoryBean = super.shiroFilterFactoryBean();
-        // 注入自定义的TokenFormAuthenticationFilter，替换掉默认的过滤器
+        // 注入自定义的过滤器，替换掉默认的 authc 过滤器
         // 也可以自定义新的拦截类型
         shiroFilterFactoryBean.getFilters()
-                .put(DefaultFilter.authc.name(), new TokenFormAuthenticationFilter());
+                .put(DefaultFilter.authc.name(), new TokenAuthenticationFilter());
         return shiroFilterFactoryBean;
     }
 

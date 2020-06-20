@@ -45,8 +45,8 @@ public class RootController {
             log.warn("login fail, {} => {}", e.getClass().getSimpleName(), e.getMessage());
             return Result.fail(e.getMessage());
         } catch (AuthorizationException e) {
-            log.warn("没有权限", e);
-            return Result.fail("没有权限");
+            //todo.
+            return Result.fail("Permission Denied");
         }
         var size = ShiroUtil.getActiveSessions().size();
         return Result.success(String.format("u are the %dth online user.", size));
