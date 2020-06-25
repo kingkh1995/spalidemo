@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 /**
  * shiro框架实现realm
  * 只继承AuthenticatingRealm做认证，如需做权限控制需要实现AuthorizingRealm
- * todo. 权限控制
+ * todo. 1.权限控制 2.增加一个realm使用内置账号登录
  *
  * @author KaiKoo
  */

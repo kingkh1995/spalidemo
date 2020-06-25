@@ -21,7 +21,7 @@ import org.slf4j.LoggerFactory;
 /**
  * 基于token认证的自定义SessionManager
  * 将sessionid作为token添加到请求头中进行认证
- * todo. 防止重复创建session
+ * todo. session保存用户登录信息
  *
  * @author KaiKoo
  */
