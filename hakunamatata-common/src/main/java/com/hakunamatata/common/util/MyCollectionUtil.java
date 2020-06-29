@@ -10,7 +10,7 @@ import org.springframework.lang.Nullable;
  */
 public class MyCollectionUtil extends BaseUtil {
 
-    private MyCollectionUtil() throws IllegalAccessException {
+    private MyCollectionUtil(){
     }
 
     /**

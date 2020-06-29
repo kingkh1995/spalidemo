@@ -18,9 +18,6 @@ import org.springframework.http.client.ClientHttpResponse;
 @Slf4j
 public class SentinelExceptionUtil extends BaseUtil {
 
-    private SentinelExceptionUtil() throws IllegalAccessException {
-    }
-
     // SentinelResource资源的通用fallback处理，不在同一个类中时必须声明为static方法，返回值必须相同，参数列表为空，或者有一个Throwable参数
     public static Result defaultFallback(Throwable throwable) {
         if (BlockException.isBlockException(throwable)) {

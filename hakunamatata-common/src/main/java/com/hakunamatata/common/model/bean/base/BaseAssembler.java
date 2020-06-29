@@ -8,7 +8,6 @@ import java.lang.reflect.ParameterizedType;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import javax.annotation.Nullable;
 import org.springframework.beans.BeanUtils;
 
 /**
@@ -25,7 +24,7 @@ public abstract class BaseAssembler<E, T extends Serializable> {
 
     private Class<T> tClass;
 
-    public T buildDTO(@Nullable E e) {
+    public T buildDTO(E e) {
         if (null != e) {
             var t = BeanUtils.instantiateClass(tClass);
             BeanUtils.copyProperties(e, t);
@@ -34,7 +33,7 @@ public abstract class BaseAssembler<E, T extends Serializable> {
         return null;
     }
 
-    public List<T> buildDTOList(@Nullable List<E> eList) {
+    public List<T> buildDTOList(List<E> eList) {
         if (MyCollectionUtil.notEmptyAfterFilterNull(eList)) {
             var dtoList = new ArrayList<T>(eList.size());
             eList.forEach(user -> dtoList.add(buildDTO(user)));
@@ -43,7 +42,7 @@ public abstract class BaseAssembler<E, T extends Serializable> {
         return Collections.emptyList();
     }
 
-    public PageInfo<T> buildDTOPage(@Nullable Page<E> ePage) {
+    public PageInfo<T> buildDTOPage(Page<E> ePage) {
         if (null != ePage) {
             var page = new Page<T>(ePage.getPageNum(), ePage.getPageSize());
             page.setReasonable(true);

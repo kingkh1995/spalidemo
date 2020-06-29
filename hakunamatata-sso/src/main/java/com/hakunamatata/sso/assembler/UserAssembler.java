@@ -7,7 +7,6 @@ import com.hakunamatata.common.model.bean.base.BaseAssembler;
 import com.hakunamatata.common.model.dto.UserDTO;
 import com.hakunamatata.sso.entity.User;
 import java.util.Collections;
-import javax.annotation.Nullable;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
@@ -20,7 +19,7 @@ import org.springframework.util.CollectionUtils;
 public class UserAssembler extends BaseAssembler<User, UserDTO> {
 
     @Override
-    public UserDTO buildDTO(@Nullable User user) {
+    public UserDTO buildDTO(User user) {
         var dto = super.buildDTO(user);
         if (null != dto) {
             dto.setDesc(String.format("%s(%d)", user.getName().toLowerCase(), user.getAge()));
@@ -28,7 +27,7 @@ public class UserAssembler extends BaseAssembler<User, UserDTO> {
         return dto;
     }
 
-    public PageInfo<UserDTO> buildDTOPage(@Nullable IPage<User> userPage) {
+    public PageInfo<UserDTO> buildDTOPage(IPage<User> userPage) {
         if (null != userPage) {
             var page = new Page<UserDTO>((int) userPage.getCurrent(), (int) userPage.getSize());
             page.setReasonable(true);

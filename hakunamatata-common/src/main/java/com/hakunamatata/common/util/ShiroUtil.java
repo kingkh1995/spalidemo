@@ -15,9 +15,6 @@ import org.apache.shiro.session.mgt.DefaultSessionManager;
  */
 public class ShiroUtil extends BaseUtil {
 
-    private ShiroUtil() throws IllegalAccessException {
-    }
-
     public static Collection<Session> getActiveSessions() {
         var securityManager = (SessionsSecurityManager) SecurityUtils.getSecurityManager();
         var sessionManager = (DefaultSessionManager) securityManager.getSessionManager();
