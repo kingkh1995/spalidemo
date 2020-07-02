@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootTest
-class HakunamatataCommonApplicationTests {
+class HakunamatataBackgroundApplicationTests {
 
     @Reference
     private UserProvider userProvider;

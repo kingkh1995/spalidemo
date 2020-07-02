@@ -10,9 +10,6 @@ import org.springframework.lang.Nullable;
  */
 public class MyCollectionUtil extends BaseUtil {
 
-    private MyCollectionUtil(){
-    }
-
     /**
      * 过滤空元素后判断是否非空
      *
