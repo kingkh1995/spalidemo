@@ -23,6 +23,7 @@ public class MyStringUtil extends BaseUtil {
         return map;
     }
 
+    // todo... 有bug
     private static class KMP {
 
         private final int[] value;

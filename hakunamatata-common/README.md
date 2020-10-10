@@ -5,3 +5,4 @@
     2. excel
     3. zxing
     4. id-generator
+    5. easyexcel

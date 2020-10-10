@@ -4,4 +4,6 @@
     1. mybatis-plus
     2. h2-database
     3. shiro
-    4. rocketmq
+    4. redis
+    5. JWT
+    6. rocketmq
